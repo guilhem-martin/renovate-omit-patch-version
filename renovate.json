@@ -1,5 +1,6 @@
 {
     "dependencyDashboardAutoclose": true,
+    "logLevel": "debug",
     "ignorePrAuthor": true,
     "minimumReleaseAge": "3 days",
     "internalChecksFilter": "strict",
