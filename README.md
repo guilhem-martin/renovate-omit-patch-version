@@ -2,9 +2,15 @@
 
 ## Current behavior
 
+With default versioning:
+
 - `github-actions.yml`: Renovate proposes to [migrate v3 action checkout to v4](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:588) preserving the major version format 1-digit only.
 - `pom.xml`: Renovate proposes to migrate from `6.1` to `6.1.21` (for [patch update](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:678)) and from `6.1` to `6.2.8` (for [minor update](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:692) ; in both cases it adds a patch version, turning the 2 digits version into a 3 digits version.
 - `github-actions.yml`: Renovate proposes to [migrate v43.0.0 renovate bot to v43.0.1](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:624) preserving the major.minor.patch 3 digits version.
+
+With `docker` versioning applied to `pom.xml` / maven:
+
+- Renovate [does not propose any upgrade](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15860063567/job/44714802776#step:3:656). It's what I want to achieve for patch update (staying on `6.1` i.e. 2 digits version), but I would have wanted it to propose minor update (from `6.1` to `6.2`).
 
 ## Wished behavior
 
