@@ -7,10 +7,6 @@
     "separateMinorPatch": true,
     "packageRules": [
     {
-      "matchFileNames": ["**/.gitlab-ci.yml"],
-      "groupName": "gitlab-ci dependencies"
-    },
-    {
       "matchUpdateTypes": ["patch"],
       "automerge": true
     },
@@ -18,5 +14,5 @@
       "matchUpdateTypes": ["minor"],
       "automerge": true
     }
-    ]    
+    ]
 }
