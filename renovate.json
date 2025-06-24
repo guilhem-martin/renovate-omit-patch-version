@@ -1,4 +1,5 @@
 {
+    "repositories": ["{{{RENOVATE_REPOSITORIES}}}"],
     "dependencyDashboardAutoclose": true,
     "ignorePrAuthor": true,
     "minimumReleaseAge": "3 days",
