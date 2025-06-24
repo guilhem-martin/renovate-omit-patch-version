@@ -1,18 +1,28 @@
 {
-    "dependencyDashboardAutoclose": true,
-    "ignorePrAuthor": true,
-    "minimumReleaseAge": "3 days",
-    "internalChecksFilter": "strict",
-    "platformAutomerge": true,
-    "separateMinorPatch": true,
-    "packageRules": [
+  "dependencyDashboardAutoclose": true,
+  "ignorePrAuthor": true,
+  "minimumReleaseAge": "3 days",
+  "internalChecksFilter": "strict",
+  "platformAutomerge": true,
+  "separateMinorPatch": true,
+  "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true
     },
     {
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": [
+        "minor"
+      ],
       "automerge": true
+    },
+    {
+      "matchDatasources": [
+        "maven"
+      ],
+      "versioning": "docker"
     }
-    ]
+  ]
 }
