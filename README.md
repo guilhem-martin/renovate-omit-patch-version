@@ -8,10 +8,12 @@
 
 ## Wished behavior
 
-When I set include version to `6.1`, I would like that renovate proposes upgrade to 2 digits only, not adding patch version.
-So for a minor update, it would propose `6.2` instead of `6.2.8`, and for a patch update, it would not propose any new version, keeping the current version `6.1`.
+When I set the version to `6.1`, I would like that renovate proposes upgrade to 2 digits only, preserving my version format, not adding patch version.
+So for a minor update (for a current value of `6.1`), it would propose `6.2` instead of `6.2.8`, and for a patch update, it would not propose any new version, keeping the current version `6.1`.
 
 That would be homogeneous with the behavior of the 1 digit version, where Renovate proposes to upgrade `v3` to `v4` (nor `v4.0.0`, neither `v4.0`).
+
+For instance, we could have an option `keepVersionFormat` and that would keep the version format as it is, without adding digit to the version.
 
 ## Link to the Renovate issue or Discussion
 
