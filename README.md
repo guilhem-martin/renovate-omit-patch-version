@@ -2,10 +2,13 @@
 
 ## Current behavior
 
-When I set a gitlab include to version `6.1`, Renovate will come to propose upgrade to full version _3 digits_, for instance `6.2.1`.
 
-- [MR for minor release](https://gitlab.com/guilhemmartin/renovate-omitting-patch-version/-/merge_requests/2) -> 6.2.1
-- [MR for patch release](https://gitlab.com/guilhemmartin/renovate-omitting-patch-version/-/merge_requests/1) -> 6.1.11  
+[job example](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851335527/job/44685323183)
+
+- github-actions.yml: Renovate proposes to migrate v3 action checkout to v4: OK, preserves the major version digit only.
+- github-actions.yml: Renovate proposes to migrate v43.0.0 renovate bot to v43.0.1: OK, preserves the major.minor.patch 3 digits version.
+
+
 
 ## Wished behavior
 
