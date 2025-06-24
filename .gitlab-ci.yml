@@ -1,2 +1,0 @@
-include:
-  - component: https://gitlab.com/to-be-continuous/docker/gitlab-ci-docker@6.1  
