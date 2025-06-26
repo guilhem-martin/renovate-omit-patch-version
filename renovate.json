@@ -19,9 +19,6 @@
       "automerge": true
     },
     {
-      "matchDatasources": [
-        "maven"
-      ],
       "versioning": "docker"
     }
   ]
