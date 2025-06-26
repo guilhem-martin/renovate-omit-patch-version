@@ -5,6 +5,7 @@
   "internalChecksFilter": "strict",
   "platformAutomerge": true,
   "separateMinorPatch": true,
+  "versioning": "docker",
   "packageRules": [
     {
       "matchUpdateTypes": [
@@ -17,9 +18,6 @@
         "minor"
       ],
       "automerge": true
-    },
-    {
-      "versioning": "docker"
     }
   ]
 }
