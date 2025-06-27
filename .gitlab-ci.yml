@@ -1,5 +1,5 @@
 include:
-  - component: gitlab.com/to-be-continuous/terraform/gitlab-ci-terraform@5.6  # 5.6 has 'subtags': 5.6.0 and 5.6.1. It also has 5.7 as major version.
+  - component: gitlab.com/to-be-continuous/terraform/gitlab-ci-terraform@5.7  # 5.6 has 'subtags': 5.6.0 and 5.6.1. It also has 5.7 as major version.
     inputs:
       image: dockerproxy.repos.tech.orange/hashicorp/terraform:latest
       review-enabled: true
