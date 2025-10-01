@@ -2,15 +2,20 @@
 
 ## Current behavior
 
-With default versioning:
+### With default versioning:
 
-- `github-actions.yml`: Renovate proposes to [migrate v3 action checkout to v4](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:588) preserving the major version format 1-digit only.
-- `pom.xml`: Renovate proposes to migrate from `6.1` to `6.1.21` (for [patch update](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:678)) and from `6.1` to `6.2.8` (for [minor update](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:692) ; in both cases it adds a patch version, turning the 2 digits version into a 3 digits version.
-- `github-actions.yml`: Renovate proposes to [migrate v43.0.0 renovate bot to v43.0.1](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:624) preserving the major.minor.patch 3 digits version.
+| File | Update Type | Current Version | Proposed Version | Version Format Behavior |
+|------|-------------|-----------------|------------------|------------------------|
+| `github-actions.yml` | Major | v3 | [v4](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:588) | Preserves 1-digit format |
+| `pom.xml` | Patch | 6.1 | [6.1.21](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:678) | Adds patch version (2→3 digits) |
+| `pom.xml` | Minor | 6.1 | [6.2.8](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:692) | Adds patch version (2→3 digits) |
+| `github-actions.yml` | Patch | v43.0.0 | [v43.0.1](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15851512827/job/44685935010#step:3:624) | Preserves 3-digit format |
 
-With `docker` [versioning](https://docs.renovatebot.com/configuration-options/#versioning) applied to `pom.xml` / maven:
+### With `docker` [versioning](https://docs.renovatebot.com/configuration-options/#versioning) applied to `pom.xml` / maven:
 
-- Renovate [does not propose any upgrade](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15860063567/job/44714802776#step:3:656). It's what I want to achieve for patch update (staying on `6.1` i.e. 2 digits version), but I would have wanted it to propose minor update (from `6.1` to `6.2`).
+| File | Update Type | Current Version | Proposed Version | Version Format Behavior |
+|------|-------------|-----------------|------------------|------------------------|
+| `pom.xml` | Any | 6.1 | [No upgrade proposed](https://github.com/guilhem-martin/renovate-omit-patch-version/actions/runs/15860063567/job/44714802776#step:3:656) | Stays on 2-digit version (desired for patch, but minor update to `6.2` would be wanted) |
 
 ## Wished behavior
 
